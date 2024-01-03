@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+
+.heading {
+    font-family: 'Bellefair', serif;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 150px;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 100px;
+    font-weight: 400;
+}
+
+h3 {
+    font-size: 56px;
+    font-weight: 400;
+}
+
+h4 {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+h5 {
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 4.725px;
+}
+
+.sub-heading1 {
+    font-family: 'Bellefair', serif;
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.sub-heading2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 2.362px;
+    text-transform: uppercase;
+}
+
+.nav-text {
+    
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.7px;
+}
+
+p {
+    color: #D0D6F9;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 32px;
+    /* 177.778% */
+}
+
+
