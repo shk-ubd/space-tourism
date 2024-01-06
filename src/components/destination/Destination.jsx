@@ -45,22 +45,22 @@ export default function Destination() {
     };
 
     return (
-        <div style={backgroundImageStyle} className="w-screen pt-32  lg:h-screen lg:px-[7rem] lg:pt-[10rem] lg:overflow-y-hidden" >
+        <div style={backgroundImageStyle} className="pt-24 md:pt-32 md:px-10 md:min-h-screen  lg:min-h-screen lg:px-[7rem] lg:pt-[10rem] " >
 
             <div>
                 <h5 className="text-white"> <span className="opacity-25 font-bold">01</span> Pick Your Destination </h5>
             </div>
 
-            <div className="flex flex-col h-full items-center py-10 justify-around">
+            <div className="flex flex-col h-full items-center py-8 justify-around md:pt-14 md:pb-0 lg:flex-row lg:items-start">
 
-                <div className="mb-4 lg:w-[40%]">
-                    <img className=" w-[50vw]  lg:w-[350px] " src={image} alt="moon" />
+                <div className="mb-4 lg:w-[40%] lg:m-0 ">
+                    <img className=" w-[50vw] md:max-w-[300px] lg:w-[350px] lg:max-w-[545px] " src={image} alt={name} />
                 </div>
 
 
-                <div className="flex flex-col items-center justify-between w-[80%] my-4 lg:w-[40%]">
+                <div className="flex flex-col items-center justify-between w-[80%] my-4 md:my-10 lg:m-0 lg:w-[40%] lg:items-start">
 
-                    <ul className="flex justify-evenly items-center lg:gap-8 w-full mb-5" >
+                    <ul className="flex justify-evenly items-center  w-full mb-5 md:max-w-[300px] lg:gap-8" >
                         <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "moon" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("moon") }}>MOON</button></li>
                         <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "mars" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("mars") }} >MARS</button></li>
                         <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "europa" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("europa") }}>EUROPA</button></li>
@@ -69,16 +69,16 @@ export default function Destination() {
 
                     <h2 className="heading  text-white">{name}</h2>
 
-                    <p className="w-[90%] min-h-32 max-w-[327px] ">{description}</p>
+                    <p className="w-[90%] min-h-32 max-w-[327px] md:max-w-[570px] lg:w-[444px] lg:h-[128px] ">{description}</p>
 
-                    <div className="flex flex-col w-full gap-8 lg:gap-20 mt-[2rem] border-t-2 border-t-white/30 pt-7 ">
+                    <div className="flex flex-col w-full gap-8  mt-[2rem] border-t-2 border-t-white/30 pt-7  md:mt-0 md:flex-row md:justify-evenly lg:gap-20 lg:justify-normal lg:mt-14 ">
 
-                        <div className="flex flex-col items-center gap-3">
+                        <div className="flex flex-col items-center gap-3 lg:items-start lg:min-w-[170px]">
                             <div className="sub-heading2 text-lightBlue">AVG. DISTANCE</div>
                             <div className="sub-heading1 text-white">{distance}</div>
                         </div>
 
-                        <div className="flex flex-col items-center gap-3">
+                        <div className="flex flex-col items-center gap-3 lg:items-start">
                             <div className="sub-heading2 text-lightBlue">EST. TRAVEL TIME</div>
                             <div className="sub-heading1 text-white">{travel}</div>
                         </div>
