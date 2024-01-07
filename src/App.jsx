@@ -10,7 +10,23 @@ function App() {
   const [destinations, setDestinations] = useState([])
   const [crew, setCrew] = useState([])
   const [technology, setTechnology] = useState([])
+  const [hamburgerDisplay, setHamburgerDisplay] = useState(true)
+  const [navigationDisplay, setNavigationDisplay] = useState(false)
 
+
+  const showNavigation = () => {
+    if (window.innerWidth < 768) {
+        setHamburgerDisplay(false)
+        setNavigationDisplay(true)
+    }
+}
+
+const hideNavigation = () => {
+    if (window.innerWidth < 768) {
+        setHamburgerDisplay(true)
+        setNavigationDisplay(false)
+    }
+}
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +44,7 @@ function App() {
 
   return (
     <>
-    <ContextProvider value={{ destinations, crew, technology}}>
+    <ContextProvider value={{ destinations, crew, technology, hideNavigation, showNavigation, hamburgerDisplay, navigationDisplay}}>
         <Navbar />
         <Outlet />
       </ContextProvider>

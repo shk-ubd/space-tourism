@@ -13,6 +13,9 @@ export default function Technology() {
     const [imageLandscape, setImageLandscape] = useState("/assets/technology/image-launch-vehicle-landscape.jpg")
     const [description, setDescription] = useState("A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!")
 
+    const {hideNavigation} = useSpaceContext()
+
+
     const backgroundImageStyle = {
         backgroundImage: `url(${bgDesktop})`,
         backgroundSize: 'cover',
@@ -35,7 +38,7 @@ export default function Technology() {
     }
 
     return (
-        <div style={backgroundImageStyle} className="pt-24 min-h-screen md:pt-32  lg:pl-[7rem] lg:h-screen lg:pt-[10rem]">
+        <div style={backgroundImageStyle} className="pt-24 min-h-screen md:pt-32  lg:pl-[7rem] lg:h-screen lg:pt-[10rem]" onClick={hideNavigation}>
             <div className=" lg:flex lg:flex-col lg:justify-between">
                 <div className="mb-8 md:mb-14 md:px-10 lg:mb-0 lg:p-0">
                     <h5 className="text-white"> <span className="text-white/30 font-bold">03</span> Space Launch 101</h5>

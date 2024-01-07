@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import picture from "../../assets/home/background-home-desktop.jpg"
+import { useSpaceContext } from "../../context/spaceContext";
 import {Link} from "react-router-dom"
 
 export default function Home() {
 
+    const { hideNavigation} = useSpaceContext()
 
     const backgroundImageStyle = {
         backgroundImage: `url(${picture})`,
@@ -23,7 +25,7 @@ export default function Home() {
     },[])
 
     return (
-        <div className="flex flex-col justify-around  h-screen" style={backgroundImageStyle} >
+        <div className="flex flex-col justify-around  h-screen" style={backgroundImageStyle} onClick={hideNavigation}>
             <div className="flex flex-col items-center h-[70%]  justify-around  lg:flex-row lg:h-[85vh] lg:items-end">
 
                 <div className="md:items-center md:flex md:flex-col lg:w-[40%] lg:max-w-[445px] lg:mb-20 ">

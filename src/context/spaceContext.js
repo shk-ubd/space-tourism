@@ -5,6 +5,10 @@ export const spaceContext = createContext({
     destinations: [],
     crew: [],
     technology: [],
+    navigationDisplay: false,
+    hamburgerDisplay: true,
+    showNavigation: () => {},
+    hideNavigation: () => {},
 }
 )
 

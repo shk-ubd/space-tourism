@@ -3,6 +3,8 @@ import bgDesktop from "../../assets/destination/background-destination-desktop.j
 import { useSpaceContext } from "../../context/spaceContext";
 
 export default function Destination() {
+    const {hideNavigation} = useSpaceContext()
+
     const { destinations } = useSpaceContext()
 
     const [currentDestination, setCurrentDestination] = useState("moon")
@@ -45,7 +47,7 @@ export default function Destination() {
     };
 
     return (
-        <div style={backgroundImageStyle} className="pt-24 md:pt-32 md:px-10 md:min-h-screen  lg:min-h-screen lg:px-[7rem] lg:pt-[10rem] " >
+        <div style={backgroundImageStyle} className="pt-24 md:pt-32 md:px-10 md:min-h-screen  lg:min-h-screen lg:px-[7rem] lg:pt-[10rem] " onClick={hideNavigation} >
 
             <div>
                 <h5 className="text-white"> <span className="text-white/30 font-bold">01</span> Pick Your Destination </h5>

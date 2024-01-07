@@ -12,6 +12,9 @@ export default function Crew() {
     const [role, setRole] = useState("Commander")
     const [image, setImage] = useState("/assets/crew/image-douglas-hurley.png")
 
+    const {hideNavigation} = useSpaceContext()
+
+    
     const backgroundImageStyle = {
         backgroundImage: `url(${bgDesktop})`,
         backgroundSize: 'cover',
@@ -39,7 +42,7 @@ export default function Crew() {
 
     return (
         <>
-            <div style={backgroundImageStyle} className=" pt-24  min-h-screen  md:pt-0 md:px-10  lg:px-[7rem] lg:pt-[10rem] lg:hidden ">
+            <div style={backgroundImageStyle} className=" pt-24  min-h-screen  md:pt-0 md:px-10  lg:px-[7rem] lg:pt-[10rem] lg:hidden " onClick={hideNavigation}>
 
                 <div className="flex flex-col items-center justify-between md:min-h-screen md:pt-32 ">
 

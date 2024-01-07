@@ -3,24 +3,10 @@ import { Link, NavLink } from "react-router-dom"
 import logo from "/logo.svg"
 import cross from "/assets/shared/icon-close.svg"
 import hamburger from "/assets/shared/icon-hamburger.svg"
+import { useSpaceContext } from "../../context/spaceContext";
 export default function Navbar() {
-
-    const [hamburgerDisplay, setHamburgerDisplay] = useState(true)
-    const [navigationDisplay, setNavigationDisplay] = useState(false)
-
-    const showNavigation = () => {
-        if (window.innerWidth < 768) {
-            setHamburgerDisplay(false)
-            setNavigationDisplay(true)
-        }
-    }
-
-    const hideNavigation = () => {
-        if (window.innerWidth < 768) {
-            setHamburgerDisplay(true)
-            setNavigationDisplay(false)
-        }
-    }
+    const {hamburgerDisplay, navigationDisplay, hideNavigation, showNavigation} = useSpaceContext()
+console.log({hamburgerDisplay, navigationDisplay, hideNavigation, showNavigation});
 
     return (
         <>
@@ -36,7 +22,7 @@ export default function Navbar() {
 
 
                 {/* Hamburger */}
-                <div onClick={showNavigation} className={` ${hamburgerDisplay ? "block md:hidden lg:hidden xl:hidden 2xl:hidden" : "hidden"} `}>
+                <div onClick={showNavigation} className={` ${hamburgerDisplay ? "block md:hidden lg:hidden" : "hidden"} `}>
                     <img src={hamburger} className="w-[24px] h-[21px]" alt="" />
                 </div>
 
@@ -63,7 +49,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to='/'
-                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 "}  `}>
                             <b className="md:hidden lg:inline">00</b> HOME
                         </NavLink>
                     </li>
@@ -71,7 +57,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/destination"
-                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60"}  `}>
                             <b className="md:hidden lg:inline">01</b> DESTINATION
                         </NavLink>
                     </li>
@@ -79,7 +65,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/crew"
-                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60"}  `}>
                             <b className="md:hidden lg:inline">02</b> CREW
                         </NavLink>
                     </li>
@@ -87,7 +73,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/technology"
-                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60"}  `}>
                             <b className="md:hidden lg:inline">03</b> TECHNOLOGY
                         </NavLink>
                     </li>
