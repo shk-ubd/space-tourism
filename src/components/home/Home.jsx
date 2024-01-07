@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import picture from "../../assets/home/background-home-desktop.jpg"
+import picture from "/assets/home/background-home-desktop.jpg"
 import { useSpaceContext } from "../../context/spaceContext";
 import {Link} from "react-router-dom"
 
