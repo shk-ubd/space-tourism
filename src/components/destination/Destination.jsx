@@ -48,7 +48,7 @@ export default function Destination() {
         <div style={backgroundImageStyle} className="pt-24 md:pt-32 md:px-10 md:min-h-screen  lg:min-h-screen lg:px-[7rem] lg:pt-[10rem] " >
 
             <div>
-                <h5 className="text-white"> <span className="opacity-25 font-bold">01</span> Pick Your Destination </h5>
+                <h5 className="text-white"> <span className="text-white/30 font-bold">01</span> Pick Your Destination </h5>
             </div>
 
             <div className="flex flex-col h-full items-center py-8 justify-around md:pt-14 md:pb-0 lg:flex-row lg:items-start">
@@ -61,10 +61,10 @@ export default function Destination() {
                 <div className="flex flex-col items-center justify-between w-[80%] my-4 md:my-10 lg:m-0 lg:w-[40%] lg:items-start">
 
                     <ul className="flex justify-evenly items-center  w-full mb-5 md:max-w-[300px] lg:gap-8" >
-                        <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "moon" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("moon") }}>MOON</button></li>
-                        <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "mars" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("mars") }} >MARS</button></li>
-                        <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "europa" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("europa") }}>EUROPA</button></li>
-                        <li className={`nav-text text-white border-b-2  pb-3 ${currentDestination === "titan" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("titan") }}>TITAN</button></li>
+                        <li className={`nav-text text-white border-b-2 transition-all pb-3 ${currentDestination === "moon" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("moon") }}>MOON</button></li>
+                        <li className={`nav-text text-white border-b-2 transition-all pb-3 ${currentDestination === "mars" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("mars") }} >MARS</button></li>
+                        <li className={`nav-text text-white border-b-2 transition-all pb-3 ${currentDestination === "europa" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("europa") }}>EUROPA</button></li>
+                        <li className={`nav-text text-white border-b-2 transition-all pb-3 ${currentDestination === "titan" ? "border-b-white" : "border-b-transparent hover:border-b-white/30"} `}><button onClick={() => { setCurrentDestination("titan") }}>TITAN</button></li>
                     </ul>
 
                     <h2 className="heading  text-white">{name}</h2>

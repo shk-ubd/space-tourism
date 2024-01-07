@@ -28,9 +28,9 @@ export default function Navbar() {
             <nav className={`fixed top-0 lg:top-6 w-screen p-6 flex  justify-between ${hamburgerDisplay ? "items-center " : " "}`}>
 
                 {/* LEFT ICON */}
-                <div className="">
+                <Link to="/" onClick={hideNavigation} className="block">
                     <img src={logo} className="h-10 w-10 md:h-12 md:w-12 lg:h-12 lg:w-12 xl:h-12 xl:w-12" alt="" />
-                </div>
+                </Link>
 
 
 
@@ -63,7 +63,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to='/'
-                            className={({ isActive }) => `py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
                             <b className="md:hidden lg:inline">00</b> HOME
                         </NavLink>
                     </li>
@@ -71,7 +71,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/destination"
-                            className={({ isActive }) => `py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
                             <b className="md:hidden lg:inline">01</b> DESTINATION
                         </NavLink>
                     </li>
@@ -79,7 +79,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/crew"
-                            className={({ isActive }) => `py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
                             <b className="md:hidden lg:inline">02</b> CREW
                         </NavLink>
                     </li>
@@ -87,7 +87,7 @@ export default function Navbar() {
                         <NavLink
                             onClick={hideNavigation}
                             to="/technology"
-                            className={({ isActive }) => `py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
+                            className={({ isActive }) => `transition-all py-1 lg:py-7 nav-text border-r-4 md:border-r-0 md:border-b-2 md:h-full block w-[100%]  ${isActive ? "border-r-white md:border-b-white" : "border-r-transparent md:border-b-transparent md:hover:border-b-white/60 hover:border-r-white/60"}  `}>
                             <b className="md:hidden lg:inline">03</b> TECHNOLOGY
                         </NavLink>
                     </li>

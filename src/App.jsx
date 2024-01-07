@@ -28,7 +28,7 @@ function App() {
 
   return (
     <>
-    <ContextProvider value={{ destinations, crew, technology }}>
+    <ContextProvider value={{ destinations, crew, technology}}>
         <Navbar />
         <Outlet />
       </ContextProvider>

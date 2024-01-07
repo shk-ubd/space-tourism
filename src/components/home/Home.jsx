@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import picture from "../../assets/home/background-home-desktop.jpg"
+import {Link} from "react-router-dom"
 
 export default function Home() {
 
@@ -8,6 +10,17 @@ export default function Home() {
         backgroundSize: 'cover',  // Adjust as needed
         backgroundPosition: 'center',  // Adjust as needed
     };
+
+    useEffect(()=>{
+        const outerButton = document.getElementById('outer')
+        const innerButton = document.getElementById('inner')
+        innerButton.addEventListener('mouseenter', ()=>{
+            outerButton.classList.add("bg-white/10")
+        })
+        innerButton.addEventListener('mouseleave', ()=>{
+            outerButton.classList.remove("bg-white/10")
+        })
+    },[])
 
     return (
         <div className="flex flex-col justify-around  h-screen" style={backgroundImageStyle} >
@@ -20,8 +33,10 @@ export default function Home() {
                 </div>
 
                 <div className="flex lg:items-end">
-                    <div className="w-[150px] h-[150px] bg-white rounded-full grid place-items-center md:mt-10 md:w-[242px] md:h-[242px] lg:w-[274px] lg:h-[274px] lg:mb-24">
+                    <div id="outer" className=" rounded-full grid place-items-center lg:w-[450px] transition-all duration-500 lg:h-[450px]  ">
+                    <Link to="/destination" id="inner" className="w-[150px] h-[150px] cursor-pointer bg-white rounded-full md:mt-10 lg:mt-0 grid place-items-center visible md:w-[242px] md:h-[242px] lg:w-[274px] lg:h-[274px] ">
                         <h4 className="heading  text-black">Explore</h4>
+                    </Link>
                     </div>
                 </div>
 
@@ -29,3 +44,4 @@ export default function Home() {
         </div>
     );
 }
+// 

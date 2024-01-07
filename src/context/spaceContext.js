@@ -4,7 +4,7 @@ import { createContext, useContext } from "react";
 export const spaceContext = createContext({
     destinations: [],
     crew: [],
-    technology: []
+    technology: [],
 }
 )
 

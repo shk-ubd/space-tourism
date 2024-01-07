@@ -44,7 +44,7 @@ export default function Crew() {
                 <div className="flex flex-col items-center justify-between md:min-h-screen md:pt-32 ">
 
                     <div className="pb-8 md:order-1 w-full ">
-                        <h5 className="text-white "> <span className="opacity-25 font-bold">02</span> Meet your Crew</h5>
+                        <h5 className="text-white "> <span className="text-white/30 font-bold">02</span> Meet your Crew</h5>
                     </div>
 
                     <div className=" w-[90%] h-56 flex justify-center border-b-2 border-b-white/30  md:h-[572px] md:shrink-0 md:order-3 lg:max-w-[34%]">
@@ -56,7 +56,7 @@ export default function Crew() {
 
 
                         <div className=" order-2 flex flex-col items-center md:order-1 lg:ml-8 lg:h-[260px]">
-                            <h4 className="heading text-white opacity-50">{role}</h4>
+                            <h4 className="heading text-white/50">{role}</h4>
                             <h3 className="heading text-white py-4 md:py-2 lg:mb-4 ">{name}</h3>
                             <p className="w-[90%] max-w-350px md:h-[84px] lg:max-w-[444px]">{bio}</p>
                         </div>
@@ -92,7 +92,7 @@ export default function Crew() {
                             <p className="w-[444px] h-[128px]">{bio}</p>
                         </div>
 
-                        <div className="flex gap-5 ml-8 mb-5">
+                        <div className="flex gap-5 ml-8 mb-9">
                             <button onClick={() => { setCurrentCrew("Douglas Hurley") }} className={`w-4 h-4 rounded-full  ${currentCrew === "Douglas Hurley" ? "bg-white" : "bg-white/30 hover:bg-white/50"}`}></button>
                             <button onClick={() => { setCurrentCrew("Mark Shuttleworth") }} className={`w-4 h-4 rounded-full  ${currentCrew === "Mark Shuttleworth" ? "bg-white" : "bg-white/30 hover:bg-white/50"}`}></button>
                             <button onClick={() => { setCurrentCrew("Victor Glover") }} className={`w-4 h-4 rounded-full  ${currentCrew === "Victor Glover" ? "bg-white" : "bg-white/30 hover:bg-white/50"}`}></button>
@@ -101,7 +101,7 @@ export default function Crew() {
 
                     </div>
 
-                    <div className=" max-w-[35%]  flex items-end">
+                    <div className=" max-w-[32%]  flex items-end">
                         <img className="" src={image} alt="" />
                     </div>
 
