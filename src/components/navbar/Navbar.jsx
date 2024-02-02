@@ -11,7 +11,7 @@ console.log({hamburgerDisplay, navigationDisplay, hideNavigation, showNavigation
     return (
         <>
 
-            <nav className={`fixed top-0 lg:top-6 w-screen p-6 flex  justify-between ${hamburgerDisplay ? "items-center " : " "}`}>
+            <nav className={`fixed top-0 lg:top-6 w-screen p-6 flex items-center justify-between ${hamburgerDisplay ? "items-center " : " "}`}>
 
                 {/* LEFT ICON */}
                 <Link to="/" onClick={hideNavigation} className="block">
@@ -29,7 +29,7 @@ console.log({hamburgerDisplay, navigationDisplay, hideNavigation, showNavigation
 
                 {/* Horizontal Line */}
 
-                <div className="h-[2px] w-full bg-white/30 hidden lg:block"></div>
+                <div className="h-[2px] w-[95vw] bg-white/30 hidden lg:block"></div>
 
 
 
