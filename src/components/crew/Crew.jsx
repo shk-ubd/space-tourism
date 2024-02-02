@@ -10,7 +10,7 @@ export default function Crew() {
     const [name, setName] = useState("Douglas Hurley")
     const [bio, setBio] = useState("Douglas Gerald Hurley is an American engineer, former Marine Corps pilot and former NASA astronaut. He launched into space for the third time as commander of Crew Dragon Demo-2.")
     const [role, setRole] = useState("Commander")
-    const [image, setImage] = useState("/assets/crew/image-douglas-hurley.png")
+    const [image, setImage] = useState("/assets/crew/image-douglas-hurley.webp")
 
     const {hideNavigation} = useSpaceContext()
 
@@ -26,7 +26,7 @@ export default function Crew() {
             setName(data.name)
             setBio(data.bio)
             setRole(data.role)
-            setImage(data.images.png)
+            setImage(data.images.webp)
         }
     }
 

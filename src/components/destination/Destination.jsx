@@ -9,7 +9,7 @@ export default function Destination() {
 
     const [currentDestination, setCurrentDestination] = useState("moon")
     const [name, setName] = useState("moon")
-    const [image, setImage] = useState("/assets/destination/image-moon.png")
+    const [image, setImage] = useState("/assets/destination/image-moon.webp")
     const [distance, setDistance] = useState("384,400 KM")
     const [travel, setTravel] = useState("3 DAYS")
     const [description, setDescription] = useState("See our planet as you've never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you're there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.")
@@ -36,7 +36,7 @@ export default function Destination() {
         setDistance(data.distance)
         setTravel(data.travel)
         setDescription(data.description)
-        setImage(data.images.png)
+        setImage(data.images.webp)
 
     }
 
